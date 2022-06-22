@@ -1,6 +1,6 @@
 存放网址
 
-ttps://highbe.github.io/SolidityWorm/HtmlPlace/0.html
+https://highbe.github.io/SolidityWorm/HtmlPlace/0.html
 
 https://highbe.github.io/SolidityWorm/HtmlPlace/1.html
 
