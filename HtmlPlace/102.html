@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/ciaranmcveigh5/ethernaut-x-foundry/commit/73843b989d2dea33b6094bb713a188ded58eaedf" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -61,7 +61,6 @@ contract AlienCodexTest is DSTest {
+         //////////////////////
+ 
+         (bool success, bytes memory data) = alienCodex.call(abi.encodeWithSignature("owner()"));
+-        emit Response(success, data);
+ 
+         // data is of type bytes32 so the address is padded, byte manipulation to get address
+         address refinedData = address(uint160(bytes20(uint160(uint256(bytes32(data)) << 0))));
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

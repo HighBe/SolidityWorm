@@ -1,0 +1,40 @@
+<html>
+<body>
+<a href="https://github.com/reflexer-labs/geb-uni-v3-manager/commit/692fb7487ae6bca5195a3d093eee8baa86785070" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -289,8 +289,6 @@ contract GebUniswapV3LiquidityManager is ERC20 {
+      */
+     function getToken0FromLiquidity(uint128 _liquidity) public returns (uint256 amount0) {
+         (amount0, ) = getTokenAmtsFromLiquidity(_liquidity);
+-        emit D(amount0);
+-        return amount0;
+     }
+ 
+     /**
+@@ -299,17 +297,7 @@ contract GebUniswapV3LiquidityManager is ERC20 {
+      * @return amount1 The amount of token1 received for the liquidity
+      */
+     function getToken1FromLiquidity(uint128 _liquidity) public returns (uint256 amount1) {
+-        uint256 poolLiquidity;
+-        if (_liquidity == _totalSupply) {
+-            poolLiquidity = _liquidity;
+-        } else {
+-            poolLiquidity = uint256(_liquidity).mul(position.uniLiquidity).div(_totalSupply);
+-        }
+-        amount1 = LiquidityAmounts.getAmount1ForLiquidity(
+-            TickMath.getSqrtRatioAtTick(position.lowerTick),
+-            TickMath.getSqrtRatioAtTick(position.upperTick),
+-            uint128(poolLiquidity)
+-        );
++        (,amount1) = getTokenAmtsFromLiquidity(_liquidity);
+     }
+ 
+     /**
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

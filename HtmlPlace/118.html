@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/centrifuge/tinlake/commit/e74c4d9a916bf4c1e6f982d86e385aae1c76e4c2" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -46,6 +46,7 @@ contract PoolAdmin is Auth {
+ 
+     constructor() {
+         wards[msg.sender] = 1;
++        emit Rely(msg.sender);
+     }
+ 
+     function depend(bytes32 contractName, address addr) public auth {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

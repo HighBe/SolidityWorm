@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/NFT42/Avastars-Contracts/commit/73d245ca204941ccf6ff95cecd05e5fc0c88db3c" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -179,7 +179,7 @@ contract AvastarPrimeMinter is AvastarTypes, AccessControl {
+         depositsByAddress[msg.sender] = 0;
+         unspentDeposits = unspentDeposits.sub(depositorBalance);
+         msg.sender.transfer(depositorBalance);
+-        emit DepositorBalance(msg.sender, depositsByAddress[msg.sender]);
++        emit DepositorBalance(msg.sender, 0);
+         return depositorBalance;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

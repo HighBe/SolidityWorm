@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/makerdao/univ2-lp-oracle/commit/d92ff84ffd58290324aabce69339a33b8f28b20a" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -169,6 +169,7 @@ contract UNIV2LPOracle {
+         require(_src  != address(0),                        "UNIV2LPOracle/invalid-src-address");
+         require(_orb0 != address(0) && _orb1 != address(0), "UNIV2LPOracle/invalid-oracle-address");
+         wards[msg.sender] = 1;
++        emit Rely(msg.sender);
+         src  = _src;
+         wat  = _wat;
+         normalizer0 = 10 ** sub(18, uint256(ERC20Like(UniswapV2PairLike(_src).token0()).decimals()));  // Calculate normalization factor of token0
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

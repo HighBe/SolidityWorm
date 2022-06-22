@@ -1,0 +1,28 @@
+<html>
+<body>
+<a href="https://github.com/RealityETH/subjectivocracy/commit/7fbe30540219230c0e921085b8070266db7f581a" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -396,6 +396,7 @@ contract RealitioERC20_v2_1 is BalanceHolder {
+     external {
+         require(canBeFinalized(question_id), "Cannot be finalized yet");
+         questions[question_id].is_finalized = true;
++        emit LogFinalize(question_id, questions[question_id].best_answer);
+     }
+ 
+     /// @notice (Deprecated) Return the final answer to the specified question, or revert if there isn't one
+@@ -790,7 +791,4 @@ contract RealitioERC20_v2_1 is BalanceHolder {
+         return questions[question_id].bond;
+     }
+ 
+-
+ }
+-
+- 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

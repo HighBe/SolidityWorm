@@ -1,0 +1,26 @@
+<html>
+<body>
+<a href="https://github.com/nimbusplatformorg/nim-smartcontract/commit/592b8ad714caa46ce22ee6bcab667bffc2994f16" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -28,10 +28,11 @@ contract Ownable {
+ 
+     constructor() {
+         owner = msg.sender;
++        emit OwnershipTransferred(address(0), owner);
+     }
+ 
+     modifier onlyOwner {
+-        require(msg.sender == owner);
++        require(msg.sender == owner, "LPReward: Caller is not the owner");
+         _;
+     }
+ 
+
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<a href="https://github.com/DODOEX/dodo-smart-contract/commit/9a1657d90d77085c2dcdfb9cf02a6d8b4e2fa641" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -122,5 +122,6 @@ contract DODOLpToken is Ownable {
+         balances[user] = balances[user].sub(value);
+         totalSupply = totalSupply.sub(value);
+         emit Burn(user, value);
++        emit Transfer(user, address(0), value);
+     }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<body>
+<a href="https://github.com/Ricochet-Exchange/ricochet/commit/9a05f5e4ad29d979e213e08b0cefd4dce71e2ff6" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -36,7 +36,6 @@ library StreamExchangeHelper {
+     // Update Subscriptions
+     _updateSubscription(self, self.subsidyIndexId, streamer, 0, self.subsidyToken);
+     _updateSubscription(self, self.outputIndexId, streamer, 0, self.outputToken);
+-    emit UpdatedStream(streamer, 0, self.cfa.getNetFlow(self.inputToken, address(this)));
+ 
+     // Close the streamers stream
+     self.host.callAgreement(
+@@ -51,6 +50,8 @@ library StreamExchangeHelper {
+         "0x"
+     );
+ 
++    emit UpdatedStream(streamer, 0, self.cfa.getNetFlow(self.inputToken, address(this)));
++
+   }
+ 
+   function _emergencyCloseStream(StreamExchangeStorage.StreamExchange storage self, address streamer) public {
+@@ -188,9 +189,9 @@ library StreamExchangeHelper {
+ 
+     // TODO: This needs to be "invertable"
+     // USD >> TOK
+-    minOutput = amount * 1e18 / exchangeRate / 1e12;
++    // minOutput = amount * 1e18 / exchangeRate / 1e12;
+     // TOK >> USD
+-    // minOutput = amount  * exchangeRate / 1e6;
++    minOutput = amount  * exchangeRate / 1e6;
+     minOutput = minOutput * (1e6 - self.rateTolerance) / 1e6;
+ 
+     // Scale back from 1e18 to outputToken decimals
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

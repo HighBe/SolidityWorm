@@ -1,0 +1,27 @@
+<html>
+<body>
+<a href="https://github.com/Fantom-foundation/Artion-Contracts/commit/ec65c9b8787b9de65f57d5a9add083ef66285d78" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -20,6 +20,7 @@ contract FantomTokenRegistry is Ownable {
+   function add(address token) external onlyOwner {
+     require(!enabled[token], "token already added");
+     enabled[token] = true;
++    emit TokenAdded(token);
+   }
+ 
+   /**
+@@ -30,5 +31,6 @@ contract FantomTokenRegistry is Ownable {
+   function remove(address token) external onlyOwner {
+     require(enabled[token], "token not exist");
+     enabled[token] = false;
++    emit TokenRemoved(token);
+   }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

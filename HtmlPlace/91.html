@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/2key/contracts/commit/6fe723d954da2befd21e23c5c975817c9451abaa" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -192,7 +192,7 @@ contract TwoKeyPlasmaEvents is Upgradeable {
+         setVisitedFrom(campaignAddress, contractor, last_address, referrer);
+         setVisitsList(campaignAddress, contractor, referrer, last_address);
+ 
+-        emit Joined(campaignAddress, referrer, last_address);
++        emit Joined(campaignAddress, plasmaOf(referrer), last_address);
+     }
+ 
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

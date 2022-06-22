@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/RealityETH/subjectivocracy/commit/4f62b74cbc6a716fb173b49ea2a5a6e5e0460c95" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -122,6 +122,7 @@ contract ForkManager is IArbitrator, IForkManager, ERC20 {
+         // TODO check events
+         totalSupply = totalSupply.add(_amount);
+         balanceOf[_to] = balanceOf[_to].add(_amount);
++        emit Transfer(address(0), _to, _amount);
+     }
+ 
+     // Function to clone ourselves.
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

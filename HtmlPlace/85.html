@@ -1,0 +1,31 @@
+<html>
+<body>
+<a href="https://github.com/Ricochet-Exchange/ricochet/commit/861ded7fa894ba9f10229e888579971f62108047" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -36,6 +36,7 @@ library StreamExchangeHelper {
+     // Update Subscriptions
+     _updateSubscription(self, self.subsidyIndexId, streamer, 0, self.subsidyToken);
+     _updateSubscription(self, self.outputIndexId, streamer, 0, self.outputToken);
++    emit UpdatedStream(streamer, 0, self.cfa.getNetFlow(self.inputToken, address(this)));
+ 
+     // Close the streamers stream
+     self.host.callAgreement(
+@@ -71,8 +72,8 @@ library StreamExchangeHelper {
+ 
+   function _emergencyDrain(StreamExchangeStorage.StreamExchange storage self) public {
+     require(self.cfa.getNetFlow(self.inputToken, address(this)) == 0, "!zeroStreamers");
+-    require(self.inputToken.transfer(self.owner, self.inputToken.balanceOf(address(this))), "!inputDraining");
+-    require(self.outputToken.transfer(self.owner, self.outputToken.balanceOf(address(this))), "!outputDraining");
++    self.inputToken.transfer(self.owner, self.inputToken.balanceOf(address(this)));
++    self.outputToken.transfer(self.owner, self.outputToken.balanceOf(address(this)));
+   }
+ 
+   function _getCurrentValue(
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

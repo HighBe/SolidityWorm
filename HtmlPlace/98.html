@@ -1,0 +1,22 @@
+<html>
+<body>
+<a href="https://github.com/syscoin/sysethereum-contracts/commit/9f9f5d27fb04dd999859da964b3784164bef3a33" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -217,8 +217,7 @@ contract SyscoinClaimManager is SyscoinDepositsManager, SyscoinErrorCodes {
+                 }
+             }
+             if(!allowed){
+-                emit ErrorClaim(superblockHash, ERR_SUPERBLOCK_BAD_CLAIM);
+-                return (ERR_SUPERBLOCK_BAD_CLAIM, superblockHash);  
++                revert();
+             }
+         }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

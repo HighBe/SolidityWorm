@@ -1,0 +1,58 @@
+<html>
+<body>
+<a href="https://github.com/syscoin/sysethereum-contracts/commit/bc731fe7d0e8af68c6a88eac72a135bcaf342a67" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -315,7 +315,6 @@ contract SyscoinClaimManager is Initializable, SyscoinDepositsManager, SyscoinEr
+             emit ErrorClaim(superblockHash, err);
+             return false;
+         }
+-        emit SuperblockClaimSuccessful(superblockHash, claim.submitter, inProcessCounter-1);
+         doPaySubmitter(superblockHash, claim);
+ 
+         if (confirmDescendants) {
+@@ -333,12 +332,13 @@ contract SyscoinClaimManager is Initializable, SyscoinDepositsManager, SyscoinEr
+                 claim = claims[id];
+                 err = trustedSuperblocks.confirm(id, msg.sender);
+                 require(err == ERR_SUPERBLOCK_OK);
+-                emit SuperblockClaimSuccessful(id, claim.submitter, inProcessCounter-1);
+                 doPaySubmitter(id, claim);
+                 inProcessCounter--;
++                emit SuperblockClaimSuccessful(id, claim.submitter, inProcessCounter);
+             }
+         }
+         inProcessCounter--;
++        emit SuperblockClaimSuccessful(superblockHash, claim.submitter, inProcessCounter);
+         return true;
+     }
+ 
+@@ -376,10 +376,10 @@ contract SyscoinClaimManager is Initializable, SyscoinDepositsManager, SyscoinEr
+ 
+         uint err = trustedSuperblocks.invalidate(superblockHash, claim.submitter);
+         require(err == ERR_SUPERBLOCK_OK);
+-        emit SuperblockClaimFailed(superblockHash, claim.challenger, inProcessCounter-1);
+         doPayChallenger(superblockHash, claim);
+         claim.invalid = true;
+         inProcessCounter--;
++        emit SuperblockClaimFailed(superblockHash, claim.challenger, inProcessCounter);
+         return true;
+     }
+ 
+@@ -410,9 +410,9 @@ contract SyscoinClaimManager is Initializable, SyscoinDepositsManager, SyscoinEr
+             claim.decided = true;
+             uint err = trustedSuperblocks.invalidate(superblockHash, claim.submitter);
+             require(err == ERR_SUPERBLOCK_OK);
+-            emit SuperblockClaimFailed(superblockHash, claim.challenger, inProcessCounter-1);
+             doPayChallenger(superblockHash, claim);
+             inProcessCounter--;
++            emit SuperblockClaimFailed(superblockHash, claim.challenger, inProcessCounter);
+             return false;
+         }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

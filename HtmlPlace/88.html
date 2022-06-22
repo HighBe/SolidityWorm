@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/risedle/etfs/commit/1096640bd517a006a38ccc7b16aa84fb45f182cb" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -1113,6 +1113,6 @@ contract Risedle is ERC20, Ownable, ReentrancyGuard {
+         // Send the remaining collateral to the investor minus the fee
+         IERC20(etfInfo.collateral).safeTransfer(msg.sender, redeemAmount);
+ 
+-        emit ETFBurned(msg.sender, etf, amount);
++        emit ETFBurned(msg.sender, etf, redeemAmount);
+     }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

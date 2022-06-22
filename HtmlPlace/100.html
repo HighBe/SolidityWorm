@@ -1,0 +1,23 @@
+<html>
+<body>
+<a href="https://github.com/syscoin/sysethereum-contracts/commit/197cfcb68691466cf976b6527260c1f3b8ecde95" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -191,8 +191,9 @@ contract SyscoinSuperblocks is SyscoinErrorCodes {
+             superblock.blockHeight = _blockHeight;
+             superblock.ancestors = updateAncestors(parent.ancestors, parent.index, parent.height);
+             indexNextSuperblock++;
++            emit NewSuperblock(superblockHash, submitter);
+         }
+-        emit NewSuperblock(superblockHash, submitter);
++        
+ 
+         return (ERR_SUPERBLOCK_OK, superblockHash);
+     }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

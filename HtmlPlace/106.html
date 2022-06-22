@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/VenusProtocol/venus-protocol/commit/1f8456ffc58106214445971bff7e5952820a5ec2" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -725,7 +725,6 @@ contract VToken is VTokenInterface, Exponential, TokenErrorReporter {
+         /* We emit a Transfer event, and a Redeem event */
+         emit Transfer(redeemer, address(this), vars.redeemTokens);
+         emit Redeem(redeemer, remainedAmount, vars.redeemTokens);
+-        emit RedeemFee(redeemer, feeAmount, vars.redeemTokens);
+ 
+         /* We call the defense hook */
+         comptroller.redeemVerify(address(this), redeemer, vars.redeemAmount, vars.redeemTokens);
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

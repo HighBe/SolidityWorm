@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/urbit/azimuth/commit/fab6a9e841eea8eae888a29c569c694c4ac397ff" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -769,6 +769,7 @@ contract Constitution is ConstitutionBase, ERC165Mapping, ERC721Metadata
+       polls.incrementTotalVoters();
+       ships.activateShip(_galaxy);
+       ships.setOwner(_galaxy, _target);
++      emit Transfer(0x0, _target, uint256(_galaxy));
+     }
+ 
+     function setDnsDomains(string _primary, string _secondary, string _tertiary)
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

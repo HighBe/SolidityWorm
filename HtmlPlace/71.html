@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/lexDAO/LexCorpus/commit/5ed2f8a1331eca1483278246f9240e78438ba096" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -112,7 +112,7 @@ contract LexTokenFactory is CloneFactory {
+     
+     function addMarketTerms(string calldata terms) external onlyLexDAO {
+         marketTerms.push(terms);
+-        emit AddMarketTerms(marketTerms.length, terms);
++        emit AddMarketTerms(marketTerms.length-1, terms);
+     }
+     
+     function amendMarketTerms(uint256 index, string calldata terms) external onlyLexDAO {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/lexDAO/LexCorpus/commit/4630d43db122e80705cd435cc9dd7f9ba4533eb9" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -13,6 +13,7 @@ contract OwnableERC20 {
+     constructor(address _erc20, uint256 _ownerBalance) {
+         erc20 = _erc20;
+         ownerBalance = _ownerBalance;
++        emit SetERC20ownerBalance(_erc20, _ownerBalance);
+     }
+     
+     /// @dev access control modifier that requires modified function to be called by account with `ownerbalance` of `erc20`
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>
