@@ -1,0 +1,40 @@
+<html>
+<body>
+<a href="https://github.com/RubiconDeFi/rubicon_protocol/commit/3906bef0b6d1172df2132946ded209f8f04aec8f" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -317,9 +317,11 @@ contract BathPair {
+         if (isAssetFill) {
+             strategist2FillsAsset[strategist] += 1;
+             totalAssetFills += 1;
++            emit LogNote("logFill asset", totalAssetFills);
+         } else {
+             strategist2FillsQuote[strategist] += 1;
+             totalQuoteFills += 1;
++            emit LogNote("logFill quote", totalQuoteFills);
+         }
+     }
+ 
+@@ -354,6 +356,7 @@ contract BathPair {
+                 delete outstandingPairIDs[x];
+                 // true if quote fills -> asset yield
+                 logFill(outstandingPairIDs[x][0], false);
++                return;
+             } else if (
+                 (offer1.pay_amt != 0 &&
+                     offer1.pay_gem != ERC20(0) &&
+@@ -372,6 +375,7 @@ contract BathPair {
+                 );
+                 delete outstandingPairIDs[x];
+                 logFill(outstandingPairIDs[x][1], true);
++                return;
+             } else if (
+                 (offer1.pay_amt != 0 &&
+                     offer1.pay_gem != ERC20(0) &&
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

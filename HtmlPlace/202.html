@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/OokiTrade/contractsV2/commit/8a2f0ddb4215ac170d82c74d3b6217bad49bd7a3" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -122,6 +122,8 @@ contract LoanTokenLogicDai is LoanTokenLogicStandard {
+             borrowAmount
+         ), "39");
+ 
++        emit FlashBorrow(borrower, target, loanTokenAddress, borrowAmount);
++
+         bytes memory callData;
+         if (bytes(signature).length == 0) {
+             callData = data;
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

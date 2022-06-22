@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros/commit/4a14484e7e9fb46a9e9fc9d46c3faa5eb81878a4" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -429,6 +429,7 @@ contract KlerosLiquid is TokenController, Arbitrator {
+                 "The vote period time has not passed yet and not every juror has voted yet."
+             );
+             dispute.period = Period.appeal;
++            emit AppealPossible(_disputeID, dispute.arbitrated);
+         } else if (dispute.period == Period.appeal) {
+             require(now - dispute.lastPeriodChange >= courts[dispute.subcourtID].timesPerPeriod[uint(dispute.period)], "The appeal period time has not passed yet.");
+             dispute.period = Period.execution;
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

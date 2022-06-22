@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros/commit/8f98774642adc2458fe11cbf8b1de8451492ff1b" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -43,7 +43,7 @@ contract PolicyRegistry {
+      *  @param _policy The URI of the policy JSON.
+      */
+     function setPolicy(uint _subcourtID, string _policy) external onlyByGovernor {
+-        emit PolicyUpdate(_subcourtID, policies[_subcourtID]);
+         policies[_subcourtID] = _policy;
++        emit PolicyUpdate(_subcourtID, policies[_subcourtID]);
+     }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

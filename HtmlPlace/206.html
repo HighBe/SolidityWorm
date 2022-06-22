@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/yam-finance/yamV3/commit/f7e9bfe08987542eb34cab193422d09ca255d0d4" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -114,6 +114,7 @@ contract MonthlyAllowance {
+         require(newPaidThisEpoch <= MONTHLY_LIMIT, "MonthlyAllowance::pay: Monthly allowance exceeded");
+         spentPerEpoch[epoch] = newPaidThisEpoch;
+         SafeERC20.safeTransferFrom(paymentAsset, reserves, recipient, amount);
++        emit Payment(recipient, amount);
+     }
+ 
+     function currentEpoch()
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/pendle-finance/pendle-core/commit/01154885472188022518745f2ca08104955b8b2b" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -553,6 +553,7 @@ abstract contract PendleMarketBase is IPendleMarket, PendleBaseToken, Withdrawab
+         checkAddRemoveSwapClaimAllowed(true);
+         interests = _beforeTransferDueInterests(user);
+         _safeTransferYieldToken(user, interests);
++        emit RedeemLpInterests(user, interests);
+     }
+ 
+     /**
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

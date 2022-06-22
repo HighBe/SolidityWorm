@@ -1,0 +1,24 @@
+<html>
+<body>
+<a href="https://github.com/bokkypoobah/BokkyPooBahsRedBlackTreeLibrary/commit/8cd7b02e707ec15c4c07122b343c9ef9129116a1" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -190,8 +190,11 @@ library BokkyPooBahsRedBlackTreeLibrary {
+             self.nodes[y].red = self.nodes[z].red;
+             (y, z) = (z, y);
+         }
++        emit Log("remove", "before doFixup", x, self.nodes[x].parent, self.nodes[x].left, self.nodes[x].right, self.nodes[x].red);
+         if (doFixup) {
++            emit Log("remove", "before removeFixup", x, self.nodes[x].parent, self.nodes[x].left, self.nodes[x].right, self.nodes[x].red);
+             removeFixup(self, x);
++            emit Log("remove", "after removeFixup", x, self.nodes[x].parent, self.nodes[x].left, self.nodes[x].right, self.nodes[x].red);
+             // TODO Check if required delete self.nodes[0];
+             // delete self.nodes[0];
+         }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

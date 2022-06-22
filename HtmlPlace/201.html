@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/OokiTrade/contractsV2/commit/c2aba5aa1f4cd13e4380c10c7b8d65790f04c749" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -107,7 +107,7 @@ contract LoanTokenLogicStandard is AdvancedToken, GasTokenUser {
+         // transfer assets to calling contract
+         _safeTransfer(loanTokenAddress, borrower, borrowAmount, "39");
+ 
+-        emit FlashLoan(borrower, target, loanTokenAddress, borrowAmount);
++        emit FlashBorrow(borrower, target, loanTokenAddress, borrowAmount);
+ 
+         bytes memory callData;
+         if (bytes(signature).length == 0) {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>
