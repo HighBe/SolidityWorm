@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/DIGITALAX/digitalax-contracts/commit/875b6602f5b95f0f7ca06ff658e5bf8df7bef8fa" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -206,6 +206,7 @@ contract ERC1155 is Context, ERC165, IERC1155, IERC1155MetadataURI {
+      */
+     function _setURI(uint256 tokenId, string memory newuri) internal virtual {
+         tokenUris[tokenId] = newuri;
++        emit URI(newuri, tokenId);
+     }
+ 
+     /**
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

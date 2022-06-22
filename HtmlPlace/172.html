@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/tornadocash/tornado-nova/commit/66320e9dbb28b5157db2dfe8f7377934866db3c2" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -29,6 +29,7 @@ contract TornadoPool is ReentrancyGuard {
+   // todo: event Transaction();
+   event NewCommitment(bytes32 commitment, uint index);
+   event NewNullifier(bytes32 nullifier);
++  event Withdraw(bytes32 indexed nullifier); // todo emit it on withdraw so we can easily find the withdraw tx for user on UI
+ 
+   /**
+     @dev The constructor
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

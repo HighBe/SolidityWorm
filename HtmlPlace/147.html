@@ -1,0 +1,36 @@
+<html>
+<body>
+<a href="https://github.com/rtoken-project/rtoken-monorepo/commit/b76852ec4bb43c756593da8366f8f61f6a6c9eff" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -253,6 +253,7 @@ contract RToken is IRToken, ReentrancyGuard {
+             account.rAmount = account.rAmount.add(interestAmount);
+             totalSupply = totalSupply.add(interestAmount);
+             emit InterestPaid(owner, interestAmount);
++            emit Transfer(address(this), owner, interestAmount);
+         }
+     }
+ 
+@@ -424,6 +425,7 @@ contract RToken is IRToken, ReentrancyGuard {
+         distributeLoans(msg.sender, mintAmount, cMintedAmount);
+ 
+         emit Mint(msg.sender, mintAmount);
++        emit Transfer(address(this), msg.sender, mintAmount);
+     }
+ 
+     /**
+@@ -453,6 +455,7 @@ contract RToken is IRToken, ReentrancyGuard {
+         // transfer the token back
+         token.transfer(msg.sender, redeemTokens);
+ 
++        emit Transfer(msg.sender, address(this), redeemTokens);
+         emit Redeem(msg.sender, redeemTokens);
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

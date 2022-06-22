@@ -1,0 +1,24 @@
+<html>
+<body>
+<a href="https://github.com/0xmostima/EBMP/commit/be95971fe265d38873c238fe745544593b440967" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -17,9 +17,11 @@ contract ContractTest is DSTest {
+ 
+     function testEBMP() public {
+         string memory ebmp = EBMP.encode(img, 32, 32, 3);
++        emit log_uint(bytes(ebmp).length);
+     }
+ 
+     function testPixelations() public {
+         string memory pixelation = renderer.tokenSVG(img_bytes);
++        emit log_uint(bytes(pixelation).length);
+     }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

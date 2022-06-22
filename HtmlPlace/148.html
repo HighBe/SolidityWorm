@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/sushiswap/bentobox-strategies/commit/2ac40618e9fb7b381279a627839e7588d41497c1" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -48,6 +48,7 @@ abstract contract BaseStrategy is IStrategy, Ownable {
+         
+         if (_strategyExecutor != address(0)) {
+             strategyExecutors[_strategyExecutor] = true;
++            emit LogSetStrategyExecutor(_strategyExecutor, true);
+         }
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

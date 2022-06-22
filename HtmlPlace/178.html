@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/Gearbox-protocol/gearbox-contracts/commit/6d5260ece8a7f2ef7fe8361c9364c65769d7d2db" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -681,6 +681,7 @@ contract CreditFilter is ICreditFilter, ACLTrait {
+ 
+     function approveAccountTransfers(address from, bool state) external override {
+         transfersAllowed[from][msg.sender] = state;  // T:[CF-43]
++        emit TransferAccountAllowed(from, msg.sender, state); // T:[CF-43]
+     }
+ 
+     function allowanceForAccountTransfers(address from, address to) external view override returns(bool) {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

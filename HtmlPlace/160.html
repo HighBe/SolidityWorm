@@ -1,0 +1,23 @@
+<html>
+<body>
+<a href="https://github.com/cowri/shell-solidity-v1/commit/b5c049a74e3cd71637f196330f2b6ca7a7f30918" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -54,10 +54,8 @@ contract LoihiRoot {
+ 
+     modifier nonReentrant() {
+         require(notEntered, "Shell/re-entered");
+-        emit log("entered");
+         notEntered = false;
+         _;
+-        emit log("exited");
+         notEntered = true;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/FrankieIsLost/TWAMM/commit/84927c791cabc937f9277a7574e5f76c61bf8a30" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -160,7 +160,7 @@ contract TWAMM is ERC20 {
+     ///@notice swap a given amount of TokenB against embedded amm 
+     function swapFromBToA(uint256 amountBIn) external {
+         uint256 amountAOut = performSwap(tokenB, tokenA, amountBIn);
+-        emit SwapAToB(msg.sender, amountBIn, amountAOut);
++        emit SwapBToA(msg.sender, amountBIn, amountAOut);
+     }
+ 
+     ///@notice create a long term order to swap from tokenB 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

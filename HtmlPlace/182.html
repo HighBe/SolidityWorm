@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/makerdao/dss-crop-join/commit/1801b71caa1b4a01a1b5c55e8f0c6cf2cbf4c4ad" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -54,6 +54,7 @@ contract SushiJoin is CropJoin {
+ 
+         ERC20(gem_).approve(masterchef_, uint256(-1));
+         wards[msg.sender] = 1;
++        emit Rely(msg.sender);
+     }
+     function nav() public override returns (uint256) {
+         return total;
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

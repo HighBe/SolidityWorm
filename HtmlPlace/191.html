@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/DODOEX/contractV2/commit/f842e6db8492580604eef4ac22b894651bea1d8f" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -39,6 +39,7 @@ contract InitializableERC20 {
+         name = _name;
+         symbol = _symbol;
+         decimals = _decimals;
++        emit Transfer(address(0), _creator, _totalSupply);
+     }
+ 
+     function transfer(address to, uint256 amount) public returns (bool) {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

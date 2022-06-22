@@ -1,0 +1,27 @@
+<html>
+<body>
+<a href="https://github.com/Instadapp/smart-contract/commit/75e0788741ee31b5e4bf7e30858fc5067b2fc76a" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -370,12 +370,13 @@ contract CompoundSave is CompoundResolver {
+         setApproval(getAddressDAI(), daiToSwap, getAddressSplitSwap());
+         uint destAmt = SplitSwapInterface(getAddressSplitSwap()).daiToEthSwap(daiToSwap, splitAmt, slippageAmt);
+         mintCEth(destAmt);
++        emit LogLeverageCompound(daiToSwap, destAmt);
+     }
+ 
+ }
+ 
+ 
+-contract InstaCompSave is CompoundResolver {
++contract InstaCompSave is CompoundSave {
+ 
+     uint public version;
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

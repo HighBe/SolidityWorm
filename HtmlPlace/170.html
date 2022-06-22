@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/celer-network/sgn-v2-contracts/commit/fbb62920f136b3d77b5178cddedb3e5b084ed9ac" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -15,6 +15,7 @@ contract Signers {
+ 
+     constructor(bytes memory _ss) {
+         ssHash = keccak256(_ss);
++        emit SignersUpdated(_ss);
+     }
+ 
+     // set new signers
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<a href="https://github.com/LlamaPay/llamapay/commit/6cf16f7e00486bfd02af37738eae36417d8cf370" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -132,6 +132,7 @@ contract LlamaPay is BoringBatchable {
+             // We push transfers to be done outside this function and at the end of public functions to avoid reentrancy exploits
+             amountToTransfer = (delta*uint(amountPerSec))/DECIMALS_DIVISOR;
+         }
++        emit Withdraw(from, to, amountPerSec, streamId, amountToTransfer);
+     }
+ 
+     // Copy of _withdraw that is view-only and returns how much can be withdrawn from a stream, purely for convenience on frontend
+@@ -165,7 +166,6 @@ contract LlamaPay is BoringBatchable {
+         streamToStart[streamId] = lastUpdate;
+         payers[from].lastPayerUpdate = lastUpdate;
+         token.safeTransfer(to, amountToTransfer);
+-        emit Withdraw(from, to, amountPerSec, streamId, amountToTransfer);
+     }
+ 
+     function _cancelStream(address to, uint216 amountPerSec) internal returns (bytes32 streamId) {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

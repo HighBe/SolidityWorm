@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/cowri/shell-solidity-v1/commit/0f89e267e24f0e8eea1cefc45f789ee7b34cba01" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -63,8 +63,6 @@ contract ShellGovernance is DSMath, CowriState {
+         Shell shell = Shell(_shell);
+         address[] memory tokens = shell.getTokens();
+ 
+-        emit log_addr_arr("tokens", tokens);
+-
+         for (uint8 i = 0; i < tokens.length; i++) {
+             for (uint8 j = i + 1; j < tokens.length; j++){
+                 pairsToActiveShells[tokens[i]][tokens[j]].push(_shell);
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

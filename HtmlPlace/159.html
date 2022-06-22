@@ -1,0 +1,22 @@
+<html>
+<body>
+<a href="https://github.com/cowri/shell-solidity-v1/commit/20fc6408df47a436df66278e5011b495166ee039" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -38,9 +38,6 @@ contract FlavorsSetup {
+     event log_address(bytes32, address);
+     function approveFlavors (address addr) public {
+ 
+-        emit log_address("addr", addr);
+-        emit log_address("agentOne", addr);
+-
+         IERC20(dai).approve(addr, 1000000000 * (10 ** 18));
+         IERC20(chai).approve(addr, 1000000000 * (10 ** 18));
+         IERC20(cdai).approve(addr, 1000000000 * (10 ** 18));
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

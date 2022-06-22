@@ -1,0 +1,23 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros-interaction/commit/48bdabe94df0827bf8c46c42def7728d0cef3c4b" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -907,8 +907,8 @@ contract ArbitrableTokenList is PermissionInterface, Arbitrable {
+      */
+     function changeMetaEvidence(string _registrationMetaEvidence, string _clearingMetaEvidence) external onlyGovernor {
+         metaEvidenceUpdates++;
+-        emit MetaEvidence(metaEvidenceUpdates, _registrationMetaEvidence);
+-        emit MetaEvidence(metaEvidenceUpdates + 1, _clearingMetaEvidence);
++        emit MetaEvidence(2 * metaEvidenceUpdates, _registrationMetaEvidence);
++        emit MetaEvidence(2 * metaEvidenceUpdates + 1, _clearingMetaEvidence);
+     }
+ 
+     /* Public Views */
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<a href="https://github.com/spartan-protocol/spartanswap-contracts/commit/3cc7b641b06725c618986921e8a903ea65d514b1" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -56,8 +56,8 @@ contract PoolFactory {
+         arrayPools.push(pool); // Add pool address to the pool array
+         arrayTokens.push(_token); // Add token to the listed array
+         isListedPool[pool] = true; // Record pool as currently listed
++        emit CreatePool(token, pool); // Emit CreatePool before the AddLiquidity event for cleaner subgraph code
+         Pool(pool).addForMember(msg.sender); // Perform the liquidity-add for the user
+-        emit CreatePool(token, pool);
+         return pool;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

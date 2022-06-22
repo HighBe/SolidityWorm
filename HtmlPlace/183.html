@@ -1,0 +1,19 @@
+<html>
+<body>
+<a href="https://github.com/DODOEX/contractV2/commit/56a1a8fdc733031ac113eb9b736422c29d20d8a1" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -129,5 +129,6 @@ contract DODOLpToken is Ownable {
+         balances[user] = balances[user].sub(value);
+         totalSupply = totalSupply.sub(value);
+         emit Burn(user, value);
++        emit Transfer(user, address(0), value);
+     }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+<a href="https://github.com/makerdao/dss-crop-join/commit/1bd5e3240357a43f3ba9a062621725a546615da2" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -70,12 +70,12 @@ contract CropManager {
+ 
+     function rely(address usr) external auth {
+         wards[usr] = 1;
+-        emit Rely(msg.sender);
++        emit Rely(usr);
+     }
+ 
+     function deny(address usr) external auth {
+         wards[usr] = 0;
+-        emit Deny(msg.sender);
++        emit Deny(usr);
+     }
+ 
+     function setImplementation(address implementation_) external auth {
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

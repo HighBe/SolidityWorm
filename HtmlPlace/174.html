@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros-interaction/commit/cb3bb7bdb6e6516d273d4aba3529016f8285ae9f" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -142,7 +142,7 @@ contract ArbitrableDeposit is Arbitrable {
+     function raiseDispute(uint _arbitrationCost) internal {
+         status = Status.DisputeCreated;
+         disputeID = arbitrator.createDispute.value(_arbitrationCost)(AMOUNT_OF_CHOICES,arbitratorExtraData);
+-        emit Dispute(arbitrator, disputeID, RULING_OPTIONS);
++        emit LinkMetaEvidence(arbitrator, disputeID, 0);
+     }
+ 
+     /** @dev Reimburse owner if claimant fails to pay the fee.
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/spartan-protocol/spartanswap-contracts/commit/a4b3c40c2543be359c20177be82d61e5e9ef12e3" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -588,7 +588,7 @@ contract Dao is ReentrancyGuard{
+     // After completing the proposal's action; close it
+     function completeProposal(uint _proposalID) internal {
+         string memory _typeStr = mapPID_type[_proposalID]; // Get proposal type
+-        emit FinalisedProposal(msg.sender, _proposalID, mapPID_votes[_proposalID], _DAOVAULT.totalWeight(), _typeStr);
++        emit FinalisedProposal(msg.sender, _proposalID, mapPID_votes[_proposalID], _DAOVAULT.totalWeight() + _BONDVAULT.totalWeight(), _typeStr);
+         mapPID_votes[_proposalID] = 0; // Reset proposal votes to 0
+         mapPID_finalised[_proposalID] = true; // Finalise the proposal
+         mapPID_finalising[_proposalID] = false; // Remove proposal from 'finalising' stage
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

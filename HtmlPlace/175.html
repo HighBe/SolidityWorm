@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros-interaction/commit/0a1da0438c0585d8850a1985e22bd2449394c260" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -236,7 +236,7 @@ contract MultipleArbitrableTokenTransactionWithFee is IArbitrable {
+         require(transaction.token.transfer(transaction.receiver, amount - feeAmount), "The `transfer` function must not fail.");
+         require(transaction.token.balanceOf(address(this)) == tokenBalance - amount, "Tried to transfer tokens more than allowed.");
+ 
+-        emit Payment(_transactionID, amount - feeAmount, msg.sender);
++        emit Payment(_transactionID, amount - feeAmount, transaction.sender);
+         emit FeeRecipientPaymentInToken(_transactionID, feeAmount, transaction.token);
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

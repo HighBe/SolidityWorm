@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/kleros/kleros-interaction/commit/285add2730318cb7e3f7e3faa542209f98851045" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -114,7 +114,7 @@ contract ArbitratorVersioningProxy is Arbitrator, Arbitrable, VersioningProxy {
+     }
+ 
+     function rule(uint _externalDisputeID, uint _ruling) public {
+-        emit Ruling(Arbitrator(msg.sender), _externalDisputeID, _ruling);
++        emit Ruling(Arbitrator(msg.sender), externalDisputeIDToLocalDisputeID[_externalDisputeID], _ruling);
+ 
+         executeRuling(_externalDisputeID, _ruling);
+     }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

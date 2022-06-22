@@ -1,0 +1,23 @@
+<html>
+<body>
+<a href="https://github.com/celer-network/sgn-v2-contracts/commit/e7fc15eee882c60025ed9e5bca52e9b9b502480d" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -51,9 +51,9 @@ contract TestRefund is MessageSenderApp, MessageReceiverApp {
+         uint256 _amount,
+         bytes calldata _message
+     ) external payable override onlyMessageBus returns (bool) {
+-        emit Refunded(_token, _amount, _message);
+         address receiver = abi.decode((_message), (address));
+         IERC20(_token).safeTransfer(receiver, _amount);
++        emit Refunded(_token, _amount, _message);
+         return true;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

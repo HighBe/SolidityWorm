@@ -1,0 +1,31 @@
+<html>
+<body>
+<a href="https://github.com/akropolisio/delphi/commit/ef2b2d28e4d0f893a51e22614f6337fa24fbd8d0" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -164,6 +164,7 @@ contract SavingsModule is Module, AccessChecker, RewardDistributions, CapperRole
+                 registeredRewardTokens.push(rtkn);
+             }
+         }
++        emit ProtocolRegistered(address(protocol), poolTokenByProtocol(address(protocol)));
+         //TODO: cleanup registeredRewardTokens if reward tokens removed
+     }
+ 
+@@ -450,6 +451,10 @@ contract SavingsModule is Module, AccessChecker, RewardDistributions, CapperRole
+         }
+     }
+ 
++    function supportedProtocols() public view returns(IDefiProtocol[] memory) {
++        return registeredProtocols;
++    }
++
+     function supportedRewardTokens() public view returns(address[] memory) {
+         return registeredRewardTokens;
+     }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

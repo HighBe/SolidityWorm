@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/DODOEX/contractV2/commit/0d033066a400ffc2a6570b2f7c62802eb0154e4a" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -24,7 +24,7 @@ contract UserQuota is InitializableOwnable, IQuota {
+         for(uint256 i = 0; i< users.length; i++) {
+             require(users[i] != address(0), "USER_INVALID");
+             userQuota[users[i]] = quotas[i];
+-            // emit SetQuota(users[i],quotas[i]);
++            emit SetQuota(users[i],quotas[i]);
+         }
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

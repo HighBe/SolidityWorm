@@ -1,0 +1,34 @@
+<html>
+<body>
+<a href="https://github.com/cowri/shell-solidity-v1/commit/298e348ea8e354038020e7224d8672baa0194e4b" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -44,11 +44,8 @@ contract LocalDaiAdapter is LoihiRoot {
+     // transfers dai in
+     // wraps it in cdai
+     function intakeNumeraire (uint256 amount) public returns (uint256) {
+-        emit log_uint("intake numeraire", amount);
+         dai.transferFrom(msg.sender, address(this), amount);
+-        emit log_uint("transfered from", amount);
+         cdai.mint(amount);
+-        emit log_uint("cdai mint", amount);
+         return amount;
+     }
+ 
+@@ -58,9 +55,7 @@ contract LocalDaiAdapter is LoihiRoot {
+     // transfers out dai
+     function outputRaw (address dst, uint256 amount) public returns (uint256) {
+ 
+-        uint256 daiBalBefore = dai.balanceOf(address(this));
+         cdai.redeemUnderlying(amount);
+-        uint256 daiBalAfter = dai.balanceOf(address(this));
+         dai.transfer(dst, amount);
+         return amount;
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>
