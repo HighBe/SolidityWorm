@@ -1,0 +1,28 @@
+<html>
+<body>
+<a href="https://github.com/darwinia-network/darwinia-bridges-sol/commit/69bf634b4745a8f646e4eed273d988501c0e1b48" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -38,6 +38,7 @@ contract WKTON is ERC223 {
+         require(msg.sender == KTON_PRECOMPILE, "WKTON: PERMISSION");
+         totalSupply += value;
+         balanceOf[from] += value;
++        emit Transfer(address(0), from, value);
+         emit Deposit(from, value);
+     }
+     function withdraw(bytes32 to, uint wad) public {
+@@ -46,6 +47,7 @@ contract WKTON is ERC223 {
+         balanceOf[msg.sender] -= wad;
+         bool success = KTON_PRECOMPILE.call(bytes4(keccak256("withdraw(bytes32,uint256)")), to, wad);
+         require(success, "WKTON: WITHDRAW_FAILED");
++        emit Transfer(msg.sender, address(0), wad);
+         emit Withdrawal(to, wad);
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

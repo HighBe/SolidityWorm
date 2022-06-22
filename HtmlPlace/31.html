@@ -1,0 +1,30 @@
+<html>
+<body>
+<a href="https://github.com/HydroBlockchain/smart-contracts/commit/d9a54f05462f1c50758b5388c4adefaafbd8c550" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -172,7 +172,7 @@ contract Snowflake is Ownable {
+             }
+         }
+ 
+-        emit RemovededEntryResolver(field, entry, resolvers);
++        emit RemovedEntryResolver(field, entry, resolvers);
+     }
+ 
+     function addThirdPartyResolvers(address[] resolvers) public {
+@@ -301,7 +301,7 @@ contract Snowflake is Ownable {
+     }
+ 
+     function getSnowflakeBalance(address _user) public returns(uint){
+-        return staking[_user];
++        return deposits[_user];
+     }
+ 
+     function getContractBalance() public returns(uint){
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

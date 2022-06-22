@@ -1,0 +1,27 @@
+<html>
+<body>
+<a href="https://github.com/teller-protocol/teller-protocol-v1/commit/731f78694e61288ffb83d83ea06335d0b39ac6f7" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -85,12 +85,12 @@ contract TTokenCompoundStrategy_1 is RolesMods, TTokenStrategy {
+                 "Teller: Strategy deposit error - Compound"
+             );
+ 
+-            emit StrategyRebalanced(NAME, msg.sender);
++            emit StrategyRebalanced(NAME, _msgSender());
+         } else if (storedRatio < compoundStore().balanceRatioMin) {
+             // Withdraw tokens from Compound
+             _withdraw(0, storedBal, compoundBal);
+ 
+-            emit StrategyRebalanced(NAME, msg.sender);
++            emit StrategyRebalanced(NAME, _msgSender());
+         }
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+<a href="https://github.com/aavegotchi/raffle/commit/98fb1ac42cfe739d943765c5f6ba58bf28e7406c" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -51,14 +51,14 @@ contract VouchersFacet is IERC1155 {
+             uint256 id = i;
+             s.vouchers[id].accountBalances[msg.sender] += 10;
+             s.vouchers[id].totalSupply += 10;
+-            emit TransferSingle(msg.sender, address(0), address(0), i, 0);
++            emit TransferSingle(address(this), address(0), msg.sender, i, 10);
+         }
+ 
+-        /* emit TransferSingle(msg.sender, address(0), address(0), 1, 0);
+-        emit TransferSingle(msg.sender, address(0), address(0), 2, 0);
+-        emit TransferSingle(msg.sender, address(0), address(0), 3, 0);
+-        emit TransferSingle(msg.sender, address(0), address(0), 4, 0);
+-        emit TransferSingle(msg.sender, address(0), address(0), 5, 0);
++        /* emit TransferSingle(address(this), address(0), address(0), 1, 0);
++        emit TransferSingle(address(this), address(0), address(0), 2, 0);
++        emit TransferSingle(address(this), address(0), address(0), 3, 0);
++        emit TransferSingle(address(this), address(0), address(0), 4, 0);
++        emit TransferSingle(address(this), address(0), address(0), 5, 0);
+         */
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

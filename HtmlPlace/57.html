@@ -1,0 +1,22 @@
+<html>
+<body>
+<a href="https://github.com/Loopring/protocols/commit/7032672266147567bb95c7369cbba635cd24cbd8" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -122,8 +122,8 @@ abstract contract SecurityModule is MetaTxModule
+         if (_lock > now) {
+             require(forceUnlock || _lockedBy == address(this), "UNABLE_TO_UNLOCK");
+             controller.securityStore().setLock(wallet, 0);
+-            emit WalletLock(wallet, 0);
+         }
++        emit WalletLock(wallet, 0);
+     }
+ 
+     function getWalletLock(address wallet)
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

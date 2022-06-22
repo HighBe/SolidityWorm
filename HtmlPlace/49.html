@@ -1,0 +1,22 @@
+<html>
+<body>
+<a href="https://github.com/sushiswap/bentobox/commit/79c1fe5e123f4921e39562a1a239bbe1be32c2f0" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -43,7 +43,7 @@ contract ERC20 is ERC20Data {
+ 
+     function approve(address spender, uint256 amount) public returns (bool success) {
+         allowance[msg.sender][spender] = amount;
+-        emit Approval(owner, spender, amount);
++        emit Approval(msg.sender, spender, amount);
+         return true;
+     }
+ 
+
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

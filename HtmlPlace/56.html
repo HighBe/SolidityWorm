@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/Loopring/protocols/commit/3b80311a62f05dca42bc44de4ee4b32b91a8dff5" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -582,7 +582,6 @@ contract ExchangeV3 is IExchangeV3, ReentrancyGuard
+         require(state.agentRegistry.isAgent(owners, msg.sender), "UNAUTHORIZED");
+         for (uint i = 0; i < owners.length; i++) {
+             state.approvedTx[owners[i]][transactionHashes[i]] = true;
+-            emit TransactionApproved(owners[i], transactionHashes[i]);
+         }
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

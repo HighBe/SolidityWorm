@@ -1,0 +1,32 @@
+<html>
+<body>
+<a href="https://github.com/MyBitFoundation/MyBit-Network.tech/commit/4e90628e04f34616cd80a53e1ed3100afcf8802c" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -74,9 +74,9 @@ contract DividendToken is MintableToken {
+     updateIncomeClaimed(msg.sender)
+     returns (bool) {
+         uint amount = incomeClaimed[msg.sender].div(scalingFactor);
++        emit LogIncomeCollected(now, msg.sender, amount);
+         delete incomeClaimed[msg.sender];
+         msg.sender.transfer(amount);
+-        emit LogIncomeCollected(now, msg.sender, amount);
+         return true;
+     }
+ 
+@@ -114,7 +114,7 @@ contract DividendToken is MintableToken {
+ 
+     // @notice Calculates how much value _user holds
+     function getAmountOwed(address _user)
+-    private
++    public
+     view
+     returns (uint) {
+         uint valuePerTokenDifference = valuePerToken.sub(previousValuePerToken[_user]);
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

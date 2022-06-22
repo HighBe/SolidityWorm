@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/MyBitFoundation/MyBit-Network.tech/commit/7bab9d6d9418c1c7be82e3ec69936456b3593ff4" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -78,7 +78,6 @@ contract AssetGovernance {
+     bytes32 executionID = keccak256(abi.encodePacked(_executingContract, _assetID, _methodID, _parameterHash));
+     bytes32 numVotesID = keccak256(abi.encodePacked("voteTotal", executionID));
+     uint256 numTokens = assetToken.totalSupply();
+-    emit LogConsensus(numVotesID, database.uintStorage(numVotesID), numTokens, executionID, database.uintStorage(numVotesID).mul(100).div(numTokens));
+     return database.uintStorage(numVotesID).mul(scalingFactor).mul(100).div(numTokens).div(scalingFactor) >= consensus;
+   }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

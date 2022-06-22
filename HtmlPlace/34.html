@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/MyBitFoundation/MyBit-Network.tech/commit/0a847dd36a7de887e294bf098181c17e7c359237" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -113,7 +113,7 @@ contract FundingHub {
+   public {
+     require(_functionInitiator != msg.sender);
+     require(database.boolStorage(keccak256(this, _functionInitiator, "destroy", keccak256(_holdingAddress))));
+-    emit LogDestruction(_holdingAddress, this.balance, msg.sender);
++    emit LogDestruction(_holdingAddress, address(this).balance, msg.sender);
+     selfdestruct(_holdingAddress);
+   }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/yieldprotocol/vault-v2/commit/ff869bced035ac57e7b30909ace066a9ec0b9131" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -126,7 +126,7 @@ contract Liquidations is ILiquidations, Orchestrated(), Delegable(), DecimalMath
+         });
+         vaults[to].collateral = add(vaults[to].collateral, FEE);
+ 
+-        emit Liquidation(user, liquidations[user], userCollateral, userDebt);
++        emit Liquidation(user, now, userCollateral, userDebt);
+     }
+ 
+     /// @dev Buy a portion of a position under liquidation.
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

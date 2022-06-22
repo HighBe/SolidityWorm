@@ -1,0 +1,29 @@
+<html>
+<body>
+<a href="https://github.com/tatumio/smart-contracts/commit/9e1c934ffdbae90c81fe313a1bc9a32df5adb7b7" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -25,7 +25,7 @@ contract SimpleSavingsWallet is Heritable {
+    * @dev wallet can receive funds.
+    */
+   function () public payable {
+-    emit Received(msg.sender, msg.value, this.balance);
++    emit Received(msg.sender, msg.value, address(this).balance);
+   }
+ 
+   /**
+@@ -35,6 +35,6 @@ contract SimpleSavingsWallet is Heritable {
+     require(payee != 0 && payee != address(this));
+     require(amount > 0);
+     payee.transfer(amount);
+-    emit Sent(payee, amount, this.balance);
++    emit Sent(payee, amount, address(this).balance);
+   }
+ }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

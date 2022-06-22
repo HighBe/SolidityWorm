@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/elasticdao/contracts/commit/983a7e5e71fdaebed8802a686c9fb6ba59c58fa9" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -435,7 +435,7 @@ contract ElasticGovernanceToken is IElasticToken, ReentryProtection {
+ 
+     if (msg.sender != _from && _allowances[_from][msg.sender] != uint256(-1)) {
+       _allowances[_from][msg.sender] = SafeMath.sub(_allowances[_from][msg.sender], _amount);
+-      emit Approval(msg.sender, _to, _allowances[_from][msg.sender]);
++      emit Approval(_from, msg.sender, _allowances[_from][msg.sender]);
+     }
+ 
+     _transfer(_from, _to, _amount);
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

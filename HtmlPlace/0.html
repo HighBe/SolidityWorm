@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/QuickSwap/quickswap-core/commit/d1a352e44752bd6bebd51dc39940e37c31d67112" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -163,7 +163,7 @@ contract UniswapERC20 is ERC20 {
+       accumulator: tokenBData.accumulator // TODO: accumulate
+     });
+ 
+-    emit RemoveLiquidity(msg.sender, tokenAAmount, tokenBAmount);
++    emit RemoveLiquidity(recipient, tokenAAmount, tokenBAmount);
+     emit Transfer(msg.sender, address(0), amount);
+     return (tokenAAmount, tokenBAmount);
+   }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

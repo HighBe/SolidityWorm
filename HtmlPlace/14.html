@@ -1,0 +1,30 @@
+<html>
+<body>
+<a href="https://github.com/NFTX-project/nftx-protocol-v2/commit/3682a9caa7fd689cecd2dbe3f84435055b9bf90d" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -129,7 +129,7 @@ contract NFTXStakingZap is OwnableUpgradeable, ERC721HolderUpgradeable, ERC1155H
+     address xLPtoken = lpStaking.rewardDistributionToken(vaultId);
+     IERC20Upgradeable(xLPtoken).transfer(msg.sender, lockedBal);
+ 
+-    emit Withdraw(vaultId, lockedBal)
++    emit Withdraw(vaultId, lockedBal);
+   }
+ 
+   function setLockTime(uint256 newLockTime) external onlyOwner {
+@@ -215,7 +215,7 @@ contract NFTXStakingZap is OwnableUpgradeable, ERC721HolderUpgradeable, ERC1155H
+     
+     lockedBalance[vaultId][msg.sender] += liquidity;
+     uint256 lockTime = block.timestamp + lockTime;
+-    zapLock[vaultId][msg.sender] lockTime;
++    zapLock[vaultId][msg.sender] = lockTime;
+ 
+     if (amountToken < minTokenIn) {
+       IERC20Upgradeable(vault).transfer(msg.sender, minTokenIn-amountToken);
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/primitivefinance/rmm-core/commit/ed1294566c15ca2c90fb66f5ca552e68e2f20839" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -129,7 +129,7 @@ contract PrimitiveEngine is IPrimitiveEngine {
+         require(balanceRisky() >= RX1 + balRisky, "Not enough risky tokens");
+         require(balanceStable() >= RY2 + balStable, "Not enough stable tokens");
+         positions.fetch(msg.sender, pid).allocate(delLiquidity - 1000); // give liquidity to `msg.sender`, burn 1000 wei
+-        emit Create(msg.sender, pid, strike, sigma, time);
++        emit Created(msg.sender, pid, strike, sigma, time);
+     }
+ 
+     // ===== Margin =====
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

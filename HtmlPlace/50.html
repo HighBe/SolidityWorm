@@ -1,0 +1,23 @@
+<html>
+<body>
+<a href="https://github.com/worldcoin/world-id-example-airdrop/commit/2cb6c7ba5884df9f5b25647acf112cbe581e1ebd" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -106,7 +106,9 @@ contract SemaphoreMultiAirdrop {
+         });
+ 
+         getAirdrop[nextAirdropId] = airdrop;
+-        emit AirdropCreated(nextAirdropId++, airdrop);
++        emit AirdropCreated(nextAirdropId, airdrop);
++
++        ++nextAirdropId;
+     }
+ 
+     ///////////////////////////////////////////////////////////////////////////////
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

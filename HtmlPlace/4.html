@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/hashgraph/hedera-stable-coin-solidity-ethereum/commit/ac1c87c2743e06640b1fe9c8874160d7bf61a6e5" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -339,6 +339,7 @@ contract StableCoin is
+         returns (bool)
+     {
+         _transfer(_msgSender(), to, amount); // emits Transfer
++        emit Transfer(_msgSender(), to, amount); // named fields
+         return true;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

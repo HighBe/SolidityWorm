@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/tatumio/smart-contracts/commit/dc1e352cc49565ba0a33c346006655cf63681ff5" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -299,7 +299,6 @@ contract ERC721BasicToken is SupportsInterfaceWithLookup, ERC721Basic {
+     require(ownerOf(_tokenId) == _owner);
+     if (tokenApprovals[_tokenId] != address(0)) {
+       tokenApprovals[_tokenId] = address(0);
+-      emit Approval(_owner, address(0), _tokenId);
+     }
+   }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

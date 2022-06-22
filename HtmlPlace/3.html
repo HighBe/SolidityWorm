@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/DeFiOptions/DeFiOptions-core/commit/f99292cae0ee314f9c4ad08054ca76e28d35dbdf" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -134,7 +134,7 @@ contract CreditProvider is ManagedContract {
+             if (v > 0) {
+                 uint fee = MoreMath.min(value.mul(v).div(b), balanceOf(from));
+                 value = value.sub(fee);
+-                emit AccrueFees(from, value);
++                emit AccrueFees(from, fee);
+             }
+ 
+             uint credit;
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

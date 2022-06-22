@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/carboclan/y3d-protocol/commit/f283e775d63fe7bdbb832c05a0032f5ec13a8da8" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -91,6 +91,7 @@ contract YAMToken is YAMGovernanceToken {
+        uint256 yamValue = value.mul(10**18).div(yamsScalingFactor);
+        _yamBalances[msg.sender] = _yamBalances[msg.sender].sub(yamValue);
+        _yamBalances[to] = _yamBalances[to].add(yamValue);
++       emit Transfer(msg.sender, to, value);
+        return true;
+     }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

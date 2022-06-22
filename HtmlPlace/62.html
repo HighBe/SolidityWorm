@@ -1,0 +1,30 @@
+<html>
+<body>
+<a href="https://github.com/airbloc/token/commit/f23e24125d9d43a11c18e8b1bc3eed497af5be50" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -185,7 +185,7 @@ contract PresaleSecond is Ownable {
+         buyers[_addr] = 0;
+ 
+         Token.safeTransfer(_addr, releaseAmount);
+-        emit Release(_addr, buyers[_addr].mul(rate));
++        emit Release(_addr, releaseAmount);
+ 
+         return true;
+     }
+@@ -206,7 +206,7 @@ contract PresaleSecond is Ownable {
+         buyers[_addr] = 0;
+ 
+         _addr.transfer(refundAmount);
+-        emit Refund(_addr, buyers[_addr]);
++        emit Refund(_addr, refundAmount);
+ 
+         return true;
+     }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

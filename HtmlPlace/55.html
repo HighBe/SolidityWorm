@@ -1,0 +1,20 @@
+<html>
+<body>
+<a href="https://github.com/Instadapp/dsa-connectors/commit/a953a56c3829e2ee27805273a1eee8c7120750f2" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -35,7 +35,6 @@ abstract contract LiquidityManage is Helpers, Events {
+         instaPool.deposit{value: ethAmt}(token, _amt);
+         setUint(setId, _amt);
+ 
+-        emit LogDepositLiquidity(token, _amt, getId, setId);
+         _eventName = "LogDepositLiquidity(address,uint256,uint256,uint256)";
+         _eventParam = abi.encode(token, _amt, getId, setId);
+     }
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>

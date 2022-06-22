@@ -1,0 +1,21 @@
+<html>
+<body>
+<a href="https://github.com/MyBitFoundation/MyBit-Network.tech/commit/03fca2015dc4e6e05a2ce34c454be9929bd6d6aa" style="margin-left:50px;">所在commit地址</a>
+<code>
+<pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+@@ -45,7 +45,7 @@ contract MintableToken is StandardToken {
+   canMint
+   returns (bool) {
+     mintingFinished = true;
+-    emit MintFinished();
++    //emit MintFinished(); //This event causes web3 calls to hang when getting called by other contracts ¯\_(ツ)_/¯
+     return true;
+   }
+ 
+</pre>
+</code>
+<p>message:</p>
+<p>李蓝天：改动分类：原因：</p>
+<p>刘志浩：改动分类：原因：</p>
+</body>
+</html>
