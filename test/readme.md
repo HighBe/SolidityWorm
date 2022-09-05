@@ -37,7 +37,7 @@
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><a href="https://github.com/Ether1oop.github.io">1</a></span></p>
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><a href="https://ether1oop.github.io/">1</a></span></p>
   </td>
   <td width="124" valign="top" style="width:92.65pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
