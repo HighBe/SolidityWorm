@@ -1,5 +1,5 @@
 |star| repository name | event use |event use/LOC|
-|    :---:    |      :---:     |    :---:    |    :----:    |
+|    -----    |      -----     |    -----   |    ------    |
 |9567|ethereum/EIPs|108|0.0378018900945047
 |2867|Aircoin-official/AirCash|13|0.0102604577742699
 |2131|Dapp-Learning-DAO/Dapp-Learning|749|0.027297908010788
